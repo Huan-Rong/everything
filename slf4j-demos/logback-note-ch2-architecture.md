@@ -21,6 +21,7 @@ Root logger 位于整个 logger 层次结构的最高处。
 
 ## Hierarchical Naming Rule
 Logger 的命名是大小写敏感的，并遵循层次化命名规则。
+
 > A logger is said to be an ancestor of another logger if its name followed by a dot is a prefix of the descendant logger name.
 
 > A logger is said to be a parent of a child logger if there are no ancestors between itself and the descendant logger.
@@ -51,6 +52,7 @@ logger 是可以被赋予日志级别的，日志级别有以下这些：
 
 ## Printing methods and the basic selection rule
 **Basic Selection Rule**
+
 > A log request of level p issued to a logger having an effective level q, is enabled if p >= q.
 
 这条规则是 logback 的核心，它基于 TRACE < DEBUG < INFO < WARN < ERROR 的选择次序。
